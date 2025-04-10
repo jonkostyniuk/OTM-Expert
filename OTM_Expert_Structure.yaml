@@ -1,0 +1,895 @@
+---
+title: Ontario Traffic Manual Expert
+date: 2025-02-27
+description: This structured reference file consolidates information from the Ontario Traffic Manual (OTM),   the Highway Traffic Act (HTA), and related Ministry of Transportation Ontario (MTO) regulations. It is designed for use with an AI-based retrieval system to provide **accurate, indexed responses** related to Ontario’s traffic engineering guidelines, regulatory frameworks, and enforcement policies.
+
+usage: |
+  - Use this as a **knowledge base** for querying **traffic engineering guidelines, laws, and design standards** in Ontario.
+  - Ensures **precise AI retrieval** for professionals in **transportation engineering, planning, and enforcement**.
+  - Enables **structured responses** to questions on **signal design, road safety, pedestrian and cycling facilities, ATMS, and legal compliance**.
+  - Supports **regulatory compliance verification** by providing **HTA statutes, MTO regulations, and legal interpretations**.
+
+categories: |
+  - Legal & Regulatory Frameworks
+  - Traffic Control & Operations
+  - Transportation Planning & Design
+  - Enforcement & Automated Systems
+  - Advanced Traffic Management & ITS
+  - Specialized & Emerging Topics
+
+tags: |
+  - Highway Traffic Act (HTA)
+  - MTO Regulations & Compliance
+  - Speed Limits
+  - Automated Enforcement
+  - Traffic Signals
+  - Intersection Control
+  - Pavement Markings
+  - Roadway Signage
+  - Work Zones
+  - Temporary Traffic Control
+  - Freeway Operations
+  - Expressway Operations
+  - Roadway Design
+  - Active Transportation
+  - Pedestrian Safety
+  - Cycling Infrastructure
+  - Transit Priority
+  - Bus Lanes
+  - Complete Streets
+  - Accessibility Standards
+  - Red Light Cameras
+  - Speed Cameras
+  - School Bus Cameras
+  - Streetcar Enforcement
+  - Community Safety Zones
+  - Dynamic Speed Control
+  - ATMS (Advanced Traffic Management Systems)
+  - ITS Deployment
+  - Dynamic Message Signs
+  - Connected & Automated Vehicles (CAV)
+  - Data Collection
+  - AI-Based Traffic Monitoring
+  - Heavy Vehicles
+  - Truck Routes
+  - Snow Clearing
+  - Winter Road Safety
+  - Emergency Response
+  - Road Closures
+  - Smart Work Zones
+  - AI Traffic Control
+  - Pilot Projects
+  - Future Mobility Initiatives
+
+query_structure:
+  description: This structured query system prioritizes **OTM books as primary sources** for technical and engineering guidance while using **HTA/MTO regulations for legal verification**. The AI should **always reference OTM first** unless the query is strictly legal. 
+
+  default_handling: |
+    - If the user query matches multiple topics, prioritize **OTM books first, then HTA/MTO regulations**.
+    - If an OTM manual is not listed in the structured query, **fall back to related traffic control principles**.
+    - If the query is purely legal in nature (e.g., "What is the penalty for speeding?"), **prioritize HTA statutes** over OTM.
+
+  ai_fallback_handling: |
+    - If no direct match is found in OTM books, **return a structured response suggesting a related section**.
+    - If the query is regulatory (e.g., "fine for running a red light"), **prioritize HTA/MTO first**.
+    - If the query is unclear, **return a clarifying prompt asking for more details** before generating a response.
+
+  priority: |
+    - Primary Source: OTM Books (Design Standards, Engineering Guidance)
+    - Secondary Source: HTA and MTO Regulations (Laws, Enforcement, Compliance)
+    - Supporting Source: Additional government or municipal guidelines if applicable
+
+  queries:
+      - Traffic Signals & Control:
+          primary: OTM Book 12 - Traffic Signals. Covers signal phasing, timing, pedestrian signals, bicycle signals, vehicle detection, controller configurations, and intersection control strategies.
+          secondary: RRO 1990 Reg. 626 - Traffic Control Signal Systems. Legal standards for signal compliance, pedestrian right-of-way, and municipal authority in signal operations.
+          supporting: Highway Traffic Act - Signalized Intersections. General legal framework for intersection control.
+      
+      - Pedestrian Crossings:
+          primary: OTM Book 15 - Pedestrian Crossing Treatments. Covers crossing types (zebra, PXO, signalized), treatment selection criteria, sight distance, and accessibility features.
+          secondary: Highway Traffic Act - Pedestrian Crossings Regulations. Legal definitions of pedestrian crossings, driver obligations, and right-of-way enforcement.
+          supporting: MTO Accessibility Guidelines. Considerations for AODA compliance and accessible pedestrian facilities.
+      
+      - Cycling & Active Transportation:
+          primary: OTM Book 18 - Cycling Facilities. Covers bike lane design, intersection treatments, protected cycling facilities, and pavement markings.
+          secondary: Highway Traffic Act - Bicycle Regulations. Legal framework for cyclists’ rights, road sharing laws, and helmet laws.
+          supporting: MTO Complete Streets Guidelines. Best practices for integrating cycling infrastructure in urban planning.
+      
+      - Speed Limits & Automated Enforcement:
+          primary: OTM Book 5 - Regulatory Signs. Covers speed limit signs, school zone regulations, and transition speed limits.
+          secondary: Highway Traffic Act - Speed Limits & Penalties. Legal speed limits, excessive speeding penalties, and automated speed enforcement laws.
+          supporting: MTO Automated Speed Enforcement Guidelines. Includes photo radar, red light cameras, and automated ticketing policies.
+      
+      - Work Zones & Temporary Traffic Control:
+          primary: OTM Book 7 - Temporary Conditions. Covers traffic control plans, lane closures, worker protection, and detour signage.
+          secondary: HTA - Work Zone Speed Limits & Traffic Control. Legal authority on temporary traffic control measures.
+          supporting: MTO Work Zone Safety Guidelines. Best practices for minimizing risk in active construction zones.
+      
+      - Pavement Markings & Roadway Signage:
+          primary: OTM Book 6 - Warning Signs & OTM Book 5 - Regulatory Signs. Covers sign placement, visibility, retroreflectivity standards, and compliance with MUTCD.
+          secondary: Highway Traffic Act - Signage Regulations. Legal enforcement of stop signs, yield signs, and guide signage.
+          supporting: MTO Roadway Marking Standards. Provincial guidelines for pavement markings, lane delineation, and safety treatments.
+      
+      - Advanced Traffic Management Systems (ATMS):
+          primary: OTM Book 19 - Advanced Traffic Management Systems. Covers dynamic message signs, automated vehicle detection, incident management, and integrated corridor management.
+          secondary: Highway Traffic Act - ITS Regulations. Legal definitions for adaptive signals, dynamic tolling, and connected vehicle technologies.
+          supporting: MTO ATMS Deployment Framework. Government best practices for deploying ATMS and smart traffic systems.
+      
+      - Transit Priority & Bus Lanes:
+          primary: OTM Book 12 - Traffic Signals (Transit Signal Priority). Covers TSP system design, priority phasing, and transit lane markings.
+          secondary: Highway Traffic Act - Transit Lane Regulations. Legal requirements for bus lanes, queue jump signals, and multimodal priority treatments.
+          supporting: MTO Public Transit Guidelines. Provincial best practices for integrating transit priority into urban transportation networks.
+      
+      - Emergency Response & Road Closures:
+          primary: OTM Book 7 - Temporary Conditions (Emergency Response Traffic Control). Covers detour plans, emergency vehicle priority, and incident diversion strategies.
+          secondary: HTA - Road Closure & Emergency Vehicle Right-of-Way. Legal authority for road closures, emergency routes, and first responder access.
+          supporting: MTO Incident Response Guidelines. Protocols for managing large-scale accidents, natural disasters, and traffic evacuations.
+      
+      - Freeway & Expressway Operations:
+          primary: OTM Book 19 - Advanced Traffic Management Systems (Freeway Operations & ITS). Covers high-occupancy vehicle (HOV) lanes, managed lanes, and ramp metering.
+          secondary: OTM Book 12 - Traffic Signals (Managed Lanes & ITS Integration). Covers signalized freeway access, adaptive signal control, and express lane strategies.
+          supporting: Highway Traffic Act - Highway Traffic Regulations. Legal aspects of lane control, shoulder use, and freeway speed enforcement.
+      
+      - Connected & Automated Vehicles (CAV):
+          primary: OTM Book 19 - Advanced Traffic Management Systems (CAV Integration). Covers connected vehicle infrastructure, signal-to-vehicle communication, and automated vehicle detection.
+          secondary: Highway Traffic Act - Automated Vehicle Testing Regulations. Legal provisions for AV pilot programs, liability frameworks, and compliance requirements.
+          supporting: MTO Smart Mobility Framework. Guidelines for future-proofing infrastructure for autonomous technology.
+
+Ontario_Traffic_Manual_Expert:
+  Laws_and_Regulations:
+    Highway_Traffic_Act:
+      Title: Highway Traffic Act, R.S.O. 1990, CHAPTER H.8
+      Consolidation_Date: 2024-12-19
+      File: Ontario_HTA_Statutes_2024-12-19.pdf
+      Tags: [Traffic Laws, Road Safety, Licensing, Enforcement, Regulations]
+      Sections:
+        - Title: Part I - Administration
+          Description: Establishes the powers and duties of the Ministry of Transportation, including the Registrar of Motor Vehicles.
+          Tags: [MTO, Administration, Registrar, Powers]
+        - Title: Part II - Permits
+          Description: Covers vehicle permit requirements, commercial vehicle registration, IRP system, and permit violations.
+          Tags: [Vehicle Permits, Commercial Vehicles, IRP]
+        - Title: Part III - Parking Permits
+          Description: Regulations on accessible parking permits, offences, and enforcement.
+          Tags: [Accessible Parking, Parking Regulations]
+        - Title: Part III.1 - Electric Vehicle Charging Stations
+          Description: Defines regulations for EV charging station use and penalties for improper use.
+          Tags: [Electric Vehicles, Charging Stations]
+        - Title: Part IV - Licences
+          Description: Covers driver’s licences, driving instructors, suspensions, demerit points, and administrative penalties.
+          Tags: [Driver's Licences, Suspensions, Demerit Points]
+        - Title: Part V - Garage and Storage Licences
+          Description: Regulations for motor vehicle dealerships, garages, and vehicle storage facilities.
+          Tags: [Garages, Dealerships, Storage]
+        - Title: Part VI - Equipment
+          Description: Sets safety standards for vehicle equipment, including lighting, brakes, and emissions.
+          Tags: [Vehicle Equipment, Safety Standards]
+        - Title: Part VII - Load and Dimensions
+          Description: Regulates vehicle weight and dimension limits, special permits, and load security.
+          Tags: [Vehicle Dimensions, Load Limits, Oversize Permits]
+        - Title: Part VIII - Weight
+          Description: Specifies weight restrictions for vehicles and penalties for exceeding limits.
+          Tags: [Vehicle Weight, Axle Loads, Overweight Penalties]
+        - Title: Part IX - Rate of Speed
+          Description: Establishes speed limits, including reduced speed zones and careless driving penalties.
+          Tags: [Speed Limits, Careless Driving]
+        - Title: Part X - Rules of the Road
+          Description: Traffic control rules, right-of-way regulations, pedestrian crossovers, and U-turn prohibitions.
+          Tags: [Rules of the Road, Traffic Control, Right-of-Way]
+        - Title: Part X.1 - Toll Highways
+          Description: Defines regulations regarding toll highways, enforcement, and violations.
+          Tags: [Toll Highways, Electronic Tolling]
+        - Title: Part X.2 - Medical Transportation Services
+          Description: Covers regulations on the operation and licensing of medical transport vehicles.
+          Tags: [Medical Transport, Licensing]
+        - Title: Part X.3 - Off-Road Vehicles
+          Description: Sets guidelines for the use of off-road vehicles on highways.
+          Tags: [Off-Road Vehicles, ATV Regulations]
+        - Title: Part XI - Civil Proceedings
+          Description: Establishes liability rules for accidents and negligence in highway incidents.
+          Tags: [Liability, Civil Cases, Negligence]
+        - Title: Part XII - Municipal By-Laws and Bicycle Lanes
+          Description: Governs the interaction between municipal by-laws and provincial regulations on traffic management.
+          Tags: [Municipal Traffic Laws, Bicycle Lanes]
+        - Title: Part XIII - Suspension for Failure to Pay Judgments or Meet Support Obligations
+          Description: Rules for licence suspensions due to unpaid judgments or family support obligations.
+          Tags: [Licence Suspension, Judgments, Support Payments]
+        - Title: Part XIV - Records and Reporting of Accidents and Convictions
+          Description: Specifies accident reporting procedures and the role of law enforcement in recording traffic incidents.
+          Tags: [Accident Reporting, Convictions, Police Reports]
+        - Title: Part XIV.1 - Automated Speed Enforcement
+          Description: Legal framework for automated speed enforcement systems and penalties.
+          Tags: [Speed Enforcement, Cameras, Photo Radar]
+        - Title: Part XIV.2 - Red Light Camera System Evidence
+          Description: Regulations regarding red light camera evidence and its use in legal proceedings.
+          Tags: [Red Light Cameras, Intersection Safety]
+        - Title: Part XIV.3 - School Bus Camera System
+          Description: Allows for automated enforcement of school bus stopping violations.
+          Tags: [School Bus Safety, Camera Enforcement]
+        - Title: Part XIV.4 - Automated Streetcar Enforcement
+          Description: Rules for automated streetcar enforcement systems.
+          Tags: [Streetcars, Enforcement, Camera Systems]
+        - Title: Part XV - Procedure, Arrests, and Penalties
+          Description: Outlines traffic law enforcement procedures, arrests, and penalties for violations.
+          Tags: [Traffic Enforcement, Arrests, Penalties]
+        - Title: Part XVI - Pilot Projects
+          Description: Provides the framework for testing new transportation regulations and technologies.
+          Tags: [Pilot Projects, Transportation Technology, Innovation]
+    MTO_Regulations:
+      RRO_1990_Reg_626_Traffic_Control_Signal_Systems:
+        Title: R.R.O. 1990, Reg. 626 - Traffic Control Signal Systems
+        Consolidation_Date: 2017-01-01
+        File: RRO_1990_Reg_626_Traffic_Control_Signal_Systems_2017-01-01.pdf
+        Tags: [Regulations, Traffic Signals, Road Safety, Signal Design]
+        Sections:
+          - Title: Traffic Signal Requirements
+            Description: Outlines the required components for traffic signals, including signal indications (green, amber, red, arrow signals).
+            Tags: [Traffic Signals, Signal Indications, Roadway Safety]
+          - Title: Bicycle Traffic Control Signals
+            Description: Specifies bicycle-specific signal arrangements, including vertical alignment and green/amber/red bicycle symbols.
+            Tags: [Bicycle Signals, Cycling Infrastructure, Road Safety]
+          - Title: Pedestrian Control Indications
+            Description: Defines "Walk" and "Don't Walk" pedestrian signal standards, including shape, size, and symbol positioning.
+            Tags: [Pedestrian Signals, Walk Indicators, Accessibility]
+          - Title: Placement and Installation Standards
+            Description: Regulations on the positioning of traffic control signals at intersections, crosswalks, and freeway ramps.
+            Tags: [Signal Placement, Intersection Control, Crosswalks]
+          - Title: Left Turn Signal Operations
+            Description: Describes the operation of simultaneous protected and permissive left-turn signals.
+            Tags: [Left Turn Signals, Protected Left Turns, Traffic Operations]
+
+  Ontario_Traffic_Manuals:
+    OTM_Book_1:
+      Title: OTM Book 1 - Introduction to the Ontario Traffic Manual
+      Edition: 2005-03
+      File: OTM_Book_1_Introduction_to_the_OTM_2005.pdf
+      Tags: [Traffic Engineering, Design Standards, Traffic Control Devices]
+      Sections:
+        - Title: 1. Organization of the Ontario Traffic Manual
+          Description: Overview of the structure and purpose of the Ontario Traffic Manual.
+          Tags: [OTM Overview, Traffic Guidelines]
+        - Title: 2. Overview of Ontario Traffic Manual
+          Description: Background, scope, objectives, and relationship to other traffic control manuals.
+          Tags: [OTM Background, Policy, Best Practices]
+        - Title: 3. Legal Authority of Traffic Control Devices
+          Description: Explains the legal framework behind traffic control devices, including signs, markings, and signals.
+          Tags: [Legal Authority, Traffic Law, Regulations]
+        - Title: 4. Legal Liability in Traffic Engineering
+          Description: Discusses liability considerations for transportation engineers in traffic control design and implementation.
+          Tags: [Legal Liability, Engineering Responsibility]
+        - Title: 5. Principles
+          Description: Covers fundamental traffic control principles such as driver needs, excessive use of devices, standardization, illumination, and maintenance.
+          Tags: [Traffic Principles, Driver Behaviour, Standardization]
+        - Title: 6. Classification of Highways for Application of Traffic Control Devices
+          Description: Defines highway classifications and their impact on traffic control applications.
+          Tags: [Highway Classification, Roadway Design]
+        - Title: 7. Classification of Traffic Control Devices
+          Description: Describes the different classes of traffic control devices, including regulatory signs, warning signs, pavement markings, and traffic signals.
+          Tags: [Traffic Signs, Roadway Markings, Signal Systems]
+        - Title: 8. Bilingual Signing Policy
+          Description: Outlines policies for bilingual traffic signs in Ontario.
+          Tags: [Bilingual Signs, Multilingual Traffic Control]
+        - Title: 9. Manual Revisions
+          Description: Describes how updates and revisions are incorporated into the Ontario Traffic Manual.
+          Tags: [Manual Updates, Policy Changes]
+        - Title: 10. Definitions
+          Description: Provides key definitions related to traffic control and engineering.
+          Tags: [Terminology, Glossary, Traffic Definitions]
+        - Title: 11. Master Subject Index
+          Description: A comprehensive index categorizing topics covered in the Ontario Traffic Manual, allowing for quick reference based on subject matter.
+          Tags: [Index, Subject Index, Reference Material]
+        - Title: 12. Master Sign Name Index
+          Description: An alphabetical listing of all official traffic sign names used in Ontario, facilitating identification and classification.
+          Tags: [Sign Index, Sign Names, Traffic Signs]
+        - Title: 13. Master Sign Number Index
+          Description: A numerical index of traffic signs, correlating sign numbers with their official names and descriptions for easy lookup.
+          Tags: [Sign Index, Sign Numbers, Traffic Signs]
+        - Title: 14. Renumbered Signs
+          Description: A reference table showing past and current sign numbers for traffic signs that have been renumbered over time.
+          Tags: [Renumbered Signs, Sign Updates, Traffic Signs]
+        - Title: 15. References
+          Description: A list of supporting documents, manuals, and resources referenced throughout OTM Book 1.
+          Tags: [Reference Materials, Supporting Documents, OTM Resources]
+        - Title: User Response Form
+          Description: A feedback form included in OTM Book 1, allowing users to provide comments, suggestions, or report issues related to the manual.
+          Tags: [User Feedback, Response Form, OTM Updates]
+    OTM_Book_1A:
+      Title: OTM Book 1A - Illustrated Sign and Signal Display Index
+      Edition: 2001-07
+      File: OTM_Book_1A_Illustrated_Sign_and_Signal_Display_Index_2001.pdf
+      Tags: [Traffic Signs, Traffic Signals, Regulatory Index, Reference Guide]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of the illustrated index, detailing the structure and purpose of the sign and signal display listings.
+          Tags: [OTM Overview, Traffic Signs, Signal Displays]
+        - Title: 2. Regulatory Signs (Book 5)
+          Description: Illustrated index of all regulatory signs, including stop signs, yield signs, speed limit signs, and other mandatory control devices.
+          Tags: [Regulatory Signs, Traffic Control, Road Safety]
+        - Title: 3. Warning Signs (Book 6)
+          Description: Comprehensive list of all warning signs, including curve warnings, pedestrian crossings, and hazard markers.
+          Tags: [Warning Signs, Road Safety, Driver Awareness]
+        - Title: 4. Temporary Conditions Signs (Book 7)
+          Description: Displays for work zone and temporary conditions, including construction signs, detour markers, and lane closure signs.
+          Tags: [Temporary Signs, Work Zones, Construction Safety]
+        - Title: 5. Directional Guide Signs (Book 8)
+          Description: Guide signs providing route information, highway exits, service areas, and destinations.
+          Tags: [Guide Signs, Navigation, Highway Information]
+        - Title: 6. Tourism and Commercial Signs (Book 9)
+          Description: Signs related to tourism and commercial wayfinding, including attraction signs and business route markers.
+          Tags: [Tourism Signs, Business Route Signs, Commercial Navigation]
+        - Title: 7. Standard Traffic Signal Displays (Book 12, Figure 1)
+          Description: Illustrations of standard traffic signal displays, including pedestrian signals, traffic light configurations, and advanced green indicators.
+          Tags: [Traffic Signals, Signal Displays, Intersection Control]
+    OTM_Book_1B:
+      Title: OTM Book 1B - Sign Design Principles
+      Edition: 2001-07
+      File: OTM_Book_1B_Sign_Design_Principles_2001.pdf
+      Tags: [Sign Design, Traffic Signs, Roadway Communication]
+      Sections:
+        - Title: 1. Introduction
+          Description: Provides an overview of sign design principles, standardization, and their importance in traffic engineering.
+          Tags: [Introduction, Standardization, Sign Design]
+        - Title: 2. Driver Requirements
+          Description: Explains how driver perception, reading time, and response influence sign design.
+          Tags: [Driver Perception, Sign Visibility, Human Factors]
+        - Title: 3. Shape and Colour Codes
+          Description: Defines the colour and shape classifications for traffic signs, including their meanings and applications.
+          Tags: [Sign Shape, Sign Colour Codes, Traffic Symbols]
+        - Title: 4. Hierarchy of Signs
+          Description: Establishes the priority of different sign types based on criticality and safety impact.
+          Tags: [Sign Hierarchy, Regulatory Signs, Warning Signs]
+        - Title: 5. Text Legends
+          Description: Covers best practices for text-based traffic signs, including font type, letter height, and case usage.
+          Tags: [Text Signs, Font Selection, Readability]
+        - Title: 6. Symbolic Legends
+          Description: Discusses the use of symbols in traffic signs, including arrows, interdictory, and permissive symbols.
+          Tags: [Symbolic Signs, Traffic Symbols, Arrows]
+        - Title: 7. Calculating Letter Height and Symbol Size
+          Description: Outlines methods for determining appropriate letter and symbol sizes based on visibility and legibility distance.
+          Tags: [Sign Legibility, Letter Height, Symbol Size]
+        - Title: 8. Sign Layout
+          Description: Provides guidelines on message length, line spacing, and border space for effective sign design.
+          Tags: [Sign Layout, Message Clarity, Sign Borders]
+        - Title: 9. Reflectorization and Illumination
+          Description: Details the use of retroreflective materials and illumination techniques to improve nighttime visibility.
+          Tags: [Retroreflective Signs, Sign Illumination, Night Visibility]
+        - Title: 10. Contrast
+          Description: Discusses brightness contrast between sign backgrounds and text for optimal readability.
+          Tags: [Contrast, Sign Visibility, Readability]
+        - Title: 11. Selecting the Sign Size
+          Description: Provides recommendations on selecting appropriate sign sizes based on speed and visibility requirements.
+          Tags: [Sign Size, Visibility, Traffic Engineering]
+        - Title: 12. Sign Position
+          Description: Defines best practices for sign placement, including horizontal and vertical mounting considerations.
+          Tags: [Sign Placement, Mounting, Roadside Design]
+        - Title: 13. Bilingual Sign Design
+          Description: Addresses considerations for designing traffic signs with bilingual messaging.
+          Tags: [Bilingual Signs, Multilingual Traffic Control]
+        - Title: 14. Process for Assessing and Revising Sign Designs
+          Description: Details the methodology for evaluating and updating sign designs based on research and driver testing.
+          Tags: [Sign Testing, Design Updates, Research]
+        - Title: 15. Operational Programs
+          Description: Discusses sign maintenance, replacement, and inventory management practices.
+          Tags: [Sign Maintenance, Traffic Management, Inventory]
+    OTM_Book_1C:
+      Title: OTM Book 1C - Positive Guidance Toolkit
+      Edition: 2001-7
+      File: OTM_Book_1C_Positive_Guidance_Toolkit_2001.pdf
+      Tags: [Traffic Safety, Human Factors, Roadway Design, Driver Behaviour]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of the Positive Guidance concept, its role in traffic safety, and its relevance to road users.
+          Tags: [Introduction, Traffic Safety, Positive Guidance]
+        - Title: 2. Principles
+          Description: Key principles of Positive Guidance, including driver expectations, information processing, and hazard recognition.
+          Tags: [Human Factors, Driver Behaviour, Traffic Engineering]
+        - Title: 3. Procedures
+          Description: Outlines the methodology for applying Positive Guidance in roadway design and traffic control.
+          Tags: [Implementation, Roadway Design, Safety Procedures]
+        - Title: 4. Case Studies
+          Description: Real-world applications of Positive Guidance principles, including analysis of existing roadway scenarios.
+          Tags: [Case Studies, Traffic Engineering, Roadway Safety]
+    OTM_Book_2:
+      Title: OTM Book 2 - Sign Design, Fabrication, and Patterns
+      Edition: 2005-03
+      File: OTM_Book_2_Sign_Design_Fabrication_and_Patterns_2005.pdf
+      Tags: [Sign Design, Fabrication, Traffic Control Devices, Roadway Signage]
+      Sections:
+        - Title: 1. Introduction
+          Description: Provides an overview of the purpose, scope, and contents of OTM Book 2, including legal framework and revisions.
+          Tags: [Introduction, Scope, Legal Framework]
+        - Title: 2. Guidelines for Sign Design
+          Description: Covers principles of sign design, including standardization, driver requirements, colour codes, text legends, and symbolic legends.
+          Tags: [Sign Design, Standardization, Colour Codes, Symbolic Legends]
+        - Title: 3. Sign Materials
+          Description: Discusses types of materials used in sign fabrication, including sign sheeting, substrates, durability, and cost-benefit considerations.
+          Tags: [Sign Materials, Reflectivity, Durability, Cost-Benefit]
+        - Title: 4. Sign Fabrication
+          Description: Covers fabrication techniques, including substrate preparation, sheeting application, legend application, and sign assembly.
+          Tags: [Sign Fabrication, Sheeting, Assembly, Manufacturing]
+        - Title: 5. Master Sign Library
+          Description: Details the Master Sign Library (MSL), including its components, templates, electronic format, and applications.
+          Tags: [Master Sign Library, Electronic Templates, Traffic Signs]
+        - Title: Appendix A - Definitions
+          Description: Provides key definitions relevant to sign design and fabrication.
+          Tags: [Definitions, Terminology, Glossary]
+        - Title: Appendix B - References
+          Description: Lists external documents, standards, and resources referenced in OTM Book 2.
+          Tags: [References, Standards, Supporting Documents]
+    OTM_Book_4:
+      Title: OTM Book 4 - Ground-mounted Sign and Support Inspection and Maintenance
+      Edition: 2020-03
+      File: OTM_Book_4_Ground_mounted_Sign_and_Support_Inspection_and_Maintenance_2020.pdf
+      Tags: [Sign Inspection, Maintenance, Traffic Control, Road Safety]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of the manual, its purpose, scope, and legal authority regarding ground-mounted signs.
+          Tags: [Introduction, Legal Authority, Scope]
+        - Title: 2. Maintenance Prioritization
+          Description: Discusses the importance of prioritizing maintenance activities for ground-mounted signs.
+          Tags: [Maintenance Prioritization, Risk Management]
+        - Title: 3. Implications of Maintenance Deficiencies
+          Description: Outlines the consequences of inadequate maintenance on road safety and liability.
+          Tags: [Liability, Road Safety, Risk]
+        - Title: 4. Retroreflectivity
+          Description: Covers minimum maintained retroreflectivity levels, factors affecting retroreflectivity, and assessment methods.
+          Tags: [Retroreflectivity, Sign Visibility, Nighttime Safety]
+        - Title: 5. Sign and Sign Support Inventory Management
+          Description: Details sign inventory elements, data storage formats, and management protocols.
+          Tags: [Inventory Management, Sign Tracking, Data Storage]
+        - Title: 6. Sign Inspection
+          Description: Outlines inspection requirements, including nighttime and daytime assessments.
+          Tags: [Sign Inspection, Retroreflectivity Testing]
+        - Title: 7. Additional Methods for Identifying Sign Deficiencies
+          Description: Describes supplementary techniques for detecting sign deficiencies beyond regular inspections.
+          Tags: [Sign Deficiencies, Roadway Assessment]
+        - Title: 8. Sign Maintenance
+          Description: Discusses maintenance strategies, including preventative and emergency repairs.
+          Tags: [Sign Maintenance, Emergency Repairs, Preventative Maintenance]
+        - Title: 9. Inspection and Maintenance Crews
+          Description: Defines staff roles, training, equipment, and supervision for sign inspection teams.
+          Tags: [Workforce, Training, Equipment, Supervision]
+        - Title: 10. Traffic Control During Inspection and Maintenance
+          Description: Guidelines for ensuring worker and driver safety during sign inspection and maintenance.
+          Tags: [Work Zone Safety, Traffic Control]
+        - Title: 11. Sample Forms
+          Description: Provides standardized forms for recording inspection, maintenance, and inventory data.
+          Tags: [Documentation, Record Keeping, Sample Forms]
+        - Title: Appendix A - Definitions and Notation
+          Description: Key terminology and notation used throughout the manual.
+          Tags: [Definitions, Glossary, Terminology]
+        - Title: Appendix B - References
+          Description: List of supporting documents and resources cited in the manual.
+          Tags: [Reference Materials, Supporting Documents]
+    OTM_Book_5:
+      Title: OTM Book 5 - Regulatory Signs
+      Edition: 2021-12
+      File: OTM_Book_5_Regulatory_Signs_2021.pdf
+      Tags: [Traffic Engineering, Regulatory Signs, Traffic Control Devices]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of regulatory signs, their legal framework, and application in Ontario.
+          Tags: [Regulatory Signs, Traffic Laws, Sign Application]
+        - Title: 2. STOP Signs
+          Description: Regulations and applications for STOP signs, including sizes, installation, and enforcement.
+          Tags: [STOP Signs, Right-of-Way Control, Traffic Safety]
+        - Title: 3. YIELD Right-of-Way Signs
+          Description: Details on YIELD signs, their proper use, and design specifications.
+          Tags: [YIELD Signs, Right-of-Way, Traffic Control]
+        - Title: 4. Pedestrian Crossing Signs
+          Description: Covers pedestrian-specific regulatory signs, including crosswalks and crossing rules.
+          Tags: [Pedestrian Safety, Crosswalk Signs, Traffic Signs]
+        - Title: 5. Bicycle Signs
+          Description: Regulations for bicycle-specific traffic signs, including right-of-way and lane usage.
+          Tags: [Bicycle Safety, Cycling Regulations, Bike Lanes]
+        - Title: 6. Speed Control Signs
+          Description: Covers maximum speed signs, school zone limits, and enforcement guidelines.
+          Tags: [Speed Limits, Speed Control, Traffic Safety]
+        - Title: 7. Automated Enforcement Signs
+          Description: Regulatory signs related to automated enforcement, such as red light cameras.
+          Tags: [Automated Enforcement, Red Light Cameras, Speed Enforcement]
+        - Title: 8. Turn Control Signs
+          Description: Regulations and applications of turn restriction signs.
+          Tags: [Turn Restrictions, No Turn Signs, Intersection Control]
+        - Title: 9. One-Way Traffic Control Signs
+          Description: Defines signage for one-way streets and their placement.
+          Tags: [One-Way Streets, Traffic Control, Roadway Management]
+        - Title: 10. Two-Way Traffic and Multi-Lane Traffic Control Signs
+          Description: Covers regulatory signs for two-way and multi-lane traffic control.
+          Tags: [Two-Way Traffic, Lane Control, Multi-Lane Roads]
+        - Title: 11. Lane Designation Signs
+          Description: Regulations for lane use and directional control signs.
+          Tags: [Lane Control, Lane Designation, Traffic Flow]
+        - Title: 12. Managed Lanes
+          Description: Covers reserved lanes, including HOV and bicycle lanes.
+          Tags: [HOV Lanes, Reserved Lanes, Traffic Management]
+        - Title: 13. Parking Control Signs
+          Description: Covers no parking, loading zones, and accessible parking regulations.
+          Tags: [Parking Restrictions, No Parking, Accessible Parking]
+        - Title: 14. Movement Permitted Tab Signs
+          Description: Specifies permitted movements through tabbed regulatory signs.
+          Tags: [Traffic Movement, Permitted Turns, Roadway Navigation]
+        - Title: 15. Specific Vehicle Class Control Signs
+          Description: Covers truck restrictions, dangerous goods routes, and vehicle-specific prohibitions.
+          Tags: [Truck Routes, Dangerous Goods, Vehicle Restrictions]
+        - Title: 16. Supplementary Traffic Signal Control Signs
+          Description: Covers additional regulatory signage used with traffic signals.
+          Tags: [Traffic Signals, No Turn on Red, Stop Here Signs]
+        - Title: 17. Regulatory Construction Traffic Control Signs
+          Description: Temporary regulatory signs for construction zones.
+          Tags: [Construction Zones, Temporary Signs, Roadwork Safety]
+        - Title: 18. Community Safety Zone Signs
+          Description: Regulations for community safety zones and their enforcement.
+          Tags: [Community Safety, School Zones, Road Safety]
+        - Title: 19. Off-Roadway Facility Control Signs
+          Description: Regulatory signs for off-roadway vehicle use, such as snowmobiles.
+          Tags: [Off-Road Vehicles, Snowmobile Routes, Recreational Vehicles]
+        - Title: 20. Miscellaneous Control Signs
+          Description: Covers additional regulatory signs including littering and railway signs.
+          Tags: [Miscellaneous Signs, Littering, Railway Crossings]
+        - Title: 21. Subject Index
+          Description: Comprehensive index of topics covered in OTM Book 5.
+          Tags: [Index, Reference Material, Traffic Signs]
+        - Title: 22. Sign Number Index
+          Description: Organized numerical index of regulatory sign codes.
+          Tags: [Sign Index, Reference Material, Traffic Signs]
+        - Title: 23. Appendix A - Definitions
+          Description: Provides definitions for key terms related to regulatory traffic signs.
+          Tags: [Terminology, Glossary, Traffic Definitions]
+        - Title: 24. Appendix B - References
+          Description: List of referenced documents and supporting materials.
+          Tags: [Reference Materials, Supporting Documents, OTM Resources]
+    OTM_Book_6:
+      Title: OTM Book 6 - Warning Signs
+      Edition: 2001-07
+      File: OTM_Book_6_Warning_Signs_2001.pdf
+      Tags: [Traffic Engineering, Roadway Safety, Traffic Signs]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of warning signs, their purpose, application, classification, design principles, and location criteria.
+          Tags: [OTM Overview, Warning Signs, Traffic Guidelines]
+        - Title: 2. Roadway Alignment Signs
+          Description: Warning signs related to curves, turns, and roadway alignment changes, including advisory speed and hazard length tab signs.
+          Tags: [Alignment, Curve Signs, Roadway Safety]
+        - Title: 3. Intersection Warning Signs
+          Description: Signs indicating intersection configurations, including T-intersections, Y-intersections, hidden intersections, and controlled intersections.
+          Tags: [Intersection Safety, Traffic Control, Warning Signs]
+        - Title: 4. Specific Roadway Features Signs
+          Description: Signs warning of steep hills, bumps, speed humps, narrow bridges, lane ends, and other road features affecting driver response.
+          Tags: [Roadway Hazards, Speed Control, Signage]
+        - Title: 5. Divided Road Transition Signs
+          Description: Warning signs for transitions to and from divided roadways, including lane exit and merge signs.
+          Tags: [Divided Roadways, Lane Management, Highway Signs]
+        - Title: 6. Traffic Regulations Ahead Signs
+          Description: Signs alerting drivers to upcoming regulatory conditions such as stop signs, yield signs, and traffic signals.
+          Tags: [Regulatory Signs, Traffic Control, Roadway Warnings]
+        - Title: 7. Pedestrian Warning Signs
+          Description: Signs warning drivers of pedestrian crossings, school zones, playgrounds, and pedestrian activity areas.
+          Tags: [Pedestrian Safety, Crosswalks, School Zones]
+        - Title: 8. Intermittent Hazards Signs
+          Description: Warning signs for unpredictable hazards such as railway crossings, slippery roads, falling rocks, truck entrances, and animal crossings.
+          Tags: [Railway Crossings, Environmental Hazards, Animal Crossings]
+        - Title: 9. Renumbered Signs, Added Signs, New Sign Designs and Tab Signs
+          Description: Updates to warning sign numbering, new sign designs, and tab sign additions.
+          Tags: [Sign Updates, Tab Signs, New Signage]
+        - Title: Indexes
+          Description: Comprehensive indexes by subject, sign name, and sign number for easy reference.
+          Tags: [Index, Sign Classification, Reference Material]
+        - Title: Appendix A - Definitions
+          Description: Key terminology and definitions related to warning signs and their application in traffic engineering.
+          Tags: [Glossary, Terminology, Traffic Engineering]
+        - Title: Appendix B - References
+          Description: Supporting documents, manuals, and resources referenced throughout OTM Book 6.
+          Tags: [Reference Materials, Supporting Documents, OTM Resources]
+    OTM_Book_7:
+      Title: OTM Book 7 - Temporary Conditions
+      Edition: 2022-04
+      File: OTM_Book_7_Temporary_Conditions_2022.pdf
+      Tags: [Temporary Traffic Control, Work Zones, Traffic Safety]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of temporary traffic conditions, including the purpose, legal authority, and training requirements.
+          Tags: [Introduction, Legal Authority, Training]
+        - Title: 2. Temporary Work Zone Planning and Monitoring
+          Description: Guidelines for planning, designing, and operating temporary work zones, including risk assessment and transportation management planning.
+          Tags: [Work Zone Planning, Risk Management, Transportation Planning]
+        - Title: 3. Temporary Work Zone Design
+          Description: Fundamental principles of work zone design, defining highway environments, configurations, and component areas for temporary traffic conditions.
+          Tags: [Work Zone Design, Highway Safety, Traffic Configurations]
+        - Title: 4. Temporary Traffic Control Devices
+          Description: Specifications and guidelines for temporary traffic control devices, including channelization, signs, dynamic message boards, and regulatory signage.
+          Tags: [Traffic Control Devices, Temporary Signage, Safety Equipment]
+        - Title: 5. Set Up and Removal of Temporary Traffic Control
+          Description: Procedures for setting up and removing temporary traffic control measures, including freeway-specific requirements.
+          Tags: [Traffic Control Setup, Work Zone Removal, Freeway Safety]
+        - Title: 6. Layouts for Signing Temporary Work Zone Situations
+          Description: Detailed layouts for temporary work zone signage applications under different roadway conditions.
+          Tags: [Work Zone Signage, Traffic Layouts, Temporary Sign Placement]
+        - Title: Appendix A - Temporary Traffic Control for Unplanned Events
+          Description: Guidelines for handling unplanned traffic events, emergency response coordination, and rapid deployment of temporary traffic control measures.
+          Tags: [Emergency Traffic Control, Unplanned Events, Incident Management]
+        - Title: Appendix B - Glossary
+          Description: Definitions of key terms related to temporary traffic control, work zones, and road safety.
+          Tags: [Glossary, Terminology, Traffic Control, Work Zones]
+        - Title: Appendix C - References
+          Description: List of external documents, standards, and supporting materials referenced in OTM Book 7.
+          Tags: [Reference Materials, Supporting Documents, OTM Resources]
+    OTM_Book_8:
+      Title: OTM Book 8 - Guide and Information Signs (Volume One)
+      Edition: 2010-05
+      File: OTM_Book_8_Guide_and_Information_Signs_2010.pdf
+      Tags: [Traffic Engineering, Guide Signs, Information Signs, Roadway Markings]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of the purpose, scope, and content of guide and information signs.
+          Tags: [Introduction, Scope, Guidelines]
+        - Title: 2. General Principles
+          Description: Covers the purpose and limitations of guide signs, human factors, user needs, and technical considerations.
+          Tags: [Signage Principles, Human Factors, Technical Standards]
+        - Title: 3. Guide and Information Signs as a System
+          Description: Explanation of route markers, roadway identification signs, service signs, and confirmation signs.
+          Tags: [Sign Systems, Roadway Identification, Route Markers]
+        - Title: 4. Markers
+          Description: Guidelines for route markers, trailblazers, services marker boards, and distance markers.
+          Tags: [Route Markers, Distance Markers, Service Markers]
+        - Title: 5. Freeway Interchanges – Mainline Signs
+          Description: Details the application of guide and information signs at freeway interchanges.
+          Tags: [Freeway Interchanges, Exit Signs, Overhead Signs]
+        - Title: 6. Freeway Interchanges – On-Ramps
+          Description: Covers on-ramp sign installation and design considerations.
+          Tags: [On-Ramp Signs, Highway Access, Sign Installation]
+        - Title: 7. Freeway Interchanges – Off-Ramps
+          Description: Details off-ramp sign usage, placement, and grouping.
+          Tags: [Off-Ramp Signs, Highway Intersections, Exit Guidance]
+        - Title: 8. Highway Intersection Signs
+          Description: Provides guidance on intersection signage, spacing, and street name blade signs.
+          Tags: [Intersection Signs, Street Name Blades, Roadway Identification]
+        - Title: 9. Selecting Destinations
+          Description: Establishes criteria for selecting and displaying destinations on guide signs.
+          Tags: [Destination Selection, Control Cities, Assurance Signs]
+        - Title: 10. Emergency Detour Route (EDR) Signs
+          Description: Covers the purpose, design, and application of emergency detour route signage.
+          Tags: [EDR Signs, Detour Planning, Emergency Response]
+        - Title: 11. Emergency Services Identification Signs
+          Description: Includes signage for hospitals, police stations, emergency helipads, and fire services.
+          Tags: [Emergency Signs, Hospital Markers, 911 Signage]
+        - Title: 12. Public Transportation Services Signs and Markers
+          Description: Covers bus stop markers, transit stations, ferry signs, and airport signage.
+          Tags: [Transit Signage, Bus Stops, Airport Signs]
+        - Title: 13. Road User Services
+          Description: Signage for rest stops, information centers, picnic areas, and scenic lookouts.
+          Tags: [Service Centers, Roadside Facilities, Information Signs]
+        - Title: 14. Safety Message Signs
+          Description: Includes signage for community safety programs, road safety campaigns, and seat belt use.
+          Tags: [Safety Signs, Community Awareness, Seat Belt Signs]
+        - Title: 15. Major Traffic Generators
+          Description: Provides sign standards for universities, special events, and major attractions.
+          Tags: [Traffic Generators, Special Events, Attraction Signs]
+        - Title: 16. Special Signs
+          Description: Covers adopt-a-highway signs, decorative municipal displays, and unique signage.
+          Tags: [Special Signs, Municipal Displays, Highway Programs]
+        - Title: 17. Administrative Notification Signs
+          Description: Details signs related to road maintenance, highway projects, and contractor notifications.
+          Tags: [Administrative Signs, Road Maintenance, Construction Notices]
+    OTM_Book_10:
+      Title: OTM Book 10 - Dynamic Message Signs
+      Edition: 2007-12
+      File: OTM_Book_10_Dynamic_Message_Signs_2007.pdf
+      Tags: [Traffic Control, ITS, Dynamic Message Signs]
+      Sections:
+        - Title: 1. Introduction
+          Description: Provides an overview of the purpose, scope, and background of dynamic message signs in Ontario.
+          Tags: [Introduction, Purpose, Background]
+        - Title: 2. Planning Considerations
+          Description: Discusses the role of dynamic message signs in traffic management, including planning and deployment strategies.
+          Tags: [Planning, Deployment, Traffic Management]
+        - Title: 3. Dynamic Message Signs
+          Description: Details the types and functionalities of dynamic message signs, including variable and changeable message signs.
+          Tags: [Sign Types, Variable Message Signs, Changeable Message Signs]
+        - Title: 4. Design Considerations
+          Description: Covers key design aspects such as visibility, legibility, message composition, and placement of dynamic message signs.
+          Tags: [Sign Design, Visibility, Placement]
+        - Title: 5. Operational Considerations
+          Description: Discusses message content, comprehension, and operational challenges related to dynamic message signs.
+          Tags: [Operations, Message Content, Driver Comprehension]
+        - Title: 6. Other Considerations
+          Description: Addresses communication, power, mounting, security, and maintenance concerns for dynamic message signs.
+          Tags: [Power, Mounting, Maintenance, Security]
+        - Title: 7. Addendum – Excerpt from Bilingual Sign Design Study
+          Description: Includes additional insights from a bilingual sign design study relevant to dynamic message signs.
+          Tags: [Bilingual Signs, Research, Design]
+        - Title: Index
+          Description: A categorized index of key topics covered in the manual for easy reference.
+          Tags: [Index, Reference Material]
+        - Title: Appendix A – Definitions
+          Description: Provides definitions of key terms related to dynamic message signs.
+          Tags: [Terminology, Glossary]
+        - Title: Appendix B – References
+          Description: Lists supporting documents and sources cited throughout OTM Book 10.
+          Tags: [References, Supporting Documents]
+    OTM_Book_11:
+      Title: OTM Book 11 - Pavement, Hazard, and Delineation Markings
+      Edition: 2000-03
+      File: OTM_Book_11_Pavement_Markings_2000.pdf
+      Tags: [Traffic Engineering, Pavement Markings, Roadway Delineation]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of Book 11, including its purpose, scope, and standardization.
+          Tags: [Introduction, Scope, Standardization]
+        - Title: 2. General Principles
+          Description: Covers functions of markings, limitations, driver requirements, colours, materials, and application principles.
+          Tags: [Marking Principles, Driver Behaviour, Standardization]
+        - Title: 3. Pavement Markings
+          Description: Discusses types, functions, and materials used for pavement markings, including roadway markings and rumble strips.
+          Tags: [Pavement Markings, Roadway Design, Traffic Control]
+        - Title: 4. Delineation
+          Description: Covers delineators, curb markings, chevron alignment signs, and their applications for roadway visibility.
+          Tags: [Delineation, Visibility, Traffic Safety]
+        - Title: 5. Object Markings
+          Description: Explains markings on objects adjacent to and within roadways, including barricades and channelizing devices.
+          Tags: [Object Markings, Traffic Barriers, Channelization]
+        - Title: 6. Glare Control
+          Description: Discusses glare control devices and methods to improve visibility and reduce headlight glare.
+          Tags: [Glare Control, Road Safety, Visibility]
+        - Title: Appendix A - Definitions
+          Description: Provides definitions of key terms related to pavement markings and delineation.
+          Tags: [Definitions, Glossary, Traffic Terminology]
+        - Title: Appendix B - References
+          Description: Lists supporting documents, manuals, and resources referenced in OTM Book 11.
+          Tags: [References, Supporting Documents, OTM Resources]
+    OTM_Book_12:
+      Title: OTM Book 12 - Traffic Signals
+      Edition: 2024-07
+      File: OTM_Book_12_Traffic_Signals_2024.pdf
+      Tags: [Traffic Signals, Traffic Control Devices, Signal Timing, Pedestrian Signals, Bicycle Signals]
+      Sections:
+        - Title: 1. General Information
+          Description: Overview of traffic signals, their function, driver considerations, and manual structure.
+          Tags: [Traffic Signals Overview, Driver Behaviour, Signal Function]
+        - Title: 2. Legal Requirements
+          Description: Legal framework governing traffic signals under the Highway Traffic Act (HTA) and related regulations.
+          Tags: [Legal Authority, HTA Regulations, Traffic Signal Laws]
+        - Title: 3. Operational Practice
+          Description: Guidelines for signal operation, phasing, timing, and special signals such as transit priority.
+          Tags: [Traffic Signal Operation, Phasing, Timing, Transit Priority]
+        - Title: 4. Planning and Justification
+          Description: Criteria and methodologies for determining when a traffic signal is justified.
+          Tags: [Traffic Signal Justification, Planning, Volume Analysis]
+        - Title: 5. Design Practice
+          Description: Design principles for traffic signals, including placement, pole locations, and pedestrian considerations.
+          Tags: [Signal Design, Traffic Engineering, Pedestrian Signals, Bicycle Signals]
+        - Title: 6. Bicycle Signals
+          Description: Guidelines for bicycle-specific signal operations, phasing, and detection.
+          Tags: [Bicycle Signals, Cycling Infrastructure, Signal Phasing]
+        - Title: Appendix A - Parameters for Calculating Bicycle Signal Timing
+          Description: Technical calculations and considerations for bicycle signal timings.
+          Tags: [Bicycle Signal Timing, Engineering Parameters]
+        - Title: Appendix B - Glossary
+          Description: Definitions of key terms and acronyms used in traffic signal engineering.
+          Tags: [Glossary, Definitions, Terminology]
+        - Title: Appendix C - References
+          Description: List of supporting documents and resources cited in OTM Book 12.
+          Tags: [Reference Materials, Supporting Documents]
+        - Title: Appendix D - Signal Design and Drawing Checklist
+          Description: Checklist for ensuring compliance with signal design and layout best practices.
+          Tags: [Design Checklist, Traffic Signal Standards]
+    OTM_Book_15:
+      Title: OTM Book 15 - Pedestrian Crossing Treatments
+      Edition: 2016-06
+      File: OTM_Book_15_Pedestrian_Crossing_Treatments_2016.pdf
+      Tags: [Pedestrian Safety, Traffic Control, Crossing Treatments]
+      Sections:
+        - Title: 1. General Information
+          Description: Overview of pedestrian crossing treatments, purpose of the manual, and organization of the content.
+          Tags: [Introduction, Purpose, Manual Structure]
+        - Title: 2. Legal Framework
+          Description: Explanation of the legal requirements, HTA regulations, pedestrian rights, and accessibility considerations.
+          Tags: [Legal Authority, HTA, Accessibility]
+        - Title: 3. Background
+          Description: Road user considerations, safety principles, human factors, and pedestrian behavior.
+          Tags: [Pedestrian Safety, Human Factors, Road User Behavior]
+        - Title: 4. Planning
+          Description: Classification of pedestrian crossing facilities, controlled/uncontrolled crossings, and treatment hierarchy.
+          Tags: [Planning, Crossing Classification, Treatment Selection]
+        - Title: 5. Treatment System Selection for Controlled Crossings
+          Description: Assessment methodologies, decision support tools, and selection guidelines for controlled pedestrian crossings.
+          Tags: [Assessment, Treatment Selection, Decision Tool]
+        - Title: 6. Pedestrian Crossing Facility Design - Controlled Crossings
+          Description: Design considerations, geometric features, signage, pavement markings, and signalization.
+          Tags: [Crossing Design, Signals, Pavement Markings, Signs]
+        - Title: 7. Pedestrian Crossing Facility Design - Uncontrolled Crossings
+          Description: Justification and general design guidelines for uncontrolled pedestrian crossings.
+          Tags: [Uncontrolled Crossings, Design Guidelines]
+        - Title: 8. Pedestrian Crossing Facility Design - Grade-Separated Facilities
+          Description: Considerations for pedestrian bridges, underpasses, and feasibility assessments.
+          Tags: [Grade-Separated Crossings, Bridges, Underpasses]
+        - Title: 9. Glossary
+          Description: Definitions of key terms related to pedestrian crossings and traffic engineering.
+          Tags: [Glossary, Definitions, Traffic Terms]
+        - Title: 10. References
+          Description: Supporting documents, related manuals, and external standards referenced in the book.
+          Tags: [References, Supporting Documents, Standards]
+    OTM_Book_18:
+      Title: OTM Book 18 - Cycling Facilities
+      Edition: 2021-06
+      File: OTM_Book_18_Cycling_Facilities_2021.pdf
+      Tags: [Cycling Infrastructure, Bicycle Facilities, Roadway Design]
+      Sections:
+        - Title: 1. General Information
+          Description: Provides an overview of cycling infrastructure planning and the role of Book 18 in supporting cycling facilities in Ontario.
+          Tags: [Introduction, Cycling Planning, Infrastructure]
+        - Title: 2. Design Users
+          Description: Discusses the characteristics and needs of cyclists and how they impact facility design.
+          Tags: [Cyclist Needs, Design Users, Roadway Safety]
+        - Title: 3. Network Planning
+          Description: Covers strategies for planning cycling networks, including route selection and integration with other transportation modes.
+          Tags: [Cycling Network, Route Selection, Complete Streets]
+        - Title: 4. Cycling Facilities
+          Description: Details different types of cycling facilities, including protected lanes, shared lanes, and multi-use paths.
+          Tags: [Cycling Lanes, Multi-Use Paths, Roadway Design]
+        - Title: 5. Facility Selection Process
+          Description: Provides guidelines on selecting appropriate cycling infrastructure based on traffic conditions and road classification.
+          Tags: [Facility Selection, Cycling Infrastructure, Planning]
+        - Title: 6. Intersections and Crossings
+          Description: Discusses intersection treatments for cyclists, including bike signals, crossings, and protected intersections.
+          Tags: [Cyclist Intersections, Crossings, Bicycle Signals]
+        - Title: 7. Other Facility Design Treatments
+          Description: Covers additional design elements, such as transit stop interactions, curbside management, and barriers.
+          Tags: [Transit Stops, Curbside Management, Cycling Barriers]
+        - Title: 8. Implementing Cycling Infrastructure
+          Description: Describes implementation strategies, including project funding, stakeholder engagement, and construction considerations.
+          Tags: [Implementation, Project Funding, Stakeholders]
+        - Title: 9. Support Features
+          Description: Covers bicycle parking, end-of-trip facilities, and wayfinding signage.
+          Tags: [Bike Parking, End-of-Trip Facilities, Wayfinding]
+        - Title: 10. Maintenance Strategies
+          Description: Discusses maintenance best practices, including winter maintenance and hazard mitigation.
+          Tags: [Cycling Maintenance, Winter Maintenance, Road Safety]
+        - Title: Appendix A - Signage Reference
+          Description: Provides reference materials for cycling-related signs and markings.
+          Tags: [Cycling Signage, Reference, Traffic Control]
+        - Title: Appendix B - Pavement Marking Reference
+          Description: Details pavement markings specific to cycling facilities.
+          Tags: [Pavement Markings, Bicycle Lanes, Traffic Markings]
+        - Title: Appendix C - Glossary
+          Description: Defines key terms and acronyms related to cycling infrastructure.
+          Tags: [Glossary, Definitions, Cycling Terminology]
+    OTM_Book_19:
+      Title: OTM Book 19 - Advanced Traffic Management Systems
+      Edition: 2007-12
+      File: OTM_Book_19_Advanced_Traffic_Management_Systems_2007.pdf
+      Tags: [Traffic Management, ITS, ATMS, Traffic Control, Freeway Management]
+      Sections:
+        - Title: 1. Introduction
+          Description: Overview of ATMS, historical background, purpose, and scope of the manual.
+          Tags: [Introduction, ATMS, Background, Purpose]
+        - Title: 2. Advanced Traffic Management Systems Overview
+          Description: Overview of ATMS components, including information collection, surface street control, highway control, and special applications.
+          Tags: [ATMS Overview, Information Collection, Traffic Control]
+        - Title: 3. Planning for ATMS
+          Description: Framework for planning ATMS, including identifying conditions, traffic forecasts, goals, strategies, and subsystems.
+          Tags: [Planning, Traffic Analysis, Strategy]
+        - Title: 4. ATMS Design Considerations
+          Description: Technical and design elements, including real-time data collection, surface street and highway control, and communications.
+          Tags: [Design, ITS Architecture, Traffic Control Systems]
+        - Title: 5. Special ATMS Applications
+          Description: Applications such as bridge/tunnel management, smart work zones, queue warning, rural applications, and enforcement.
+          Tags: [Bridge Management, Work Zones, Queue Warning]
+        - Title: 6. Institutional and Management Considerations
+          Description: Operations, traffic operation centers, external agency interactions, maintenance, and legal issues.
+          Tags: [Traffic Operations, Management, Legal Issues]
+        - Title: 7. Evaluation of ATMS
+          Description: Methods for evaluating ATMS performance, including benefit-cost analysis and benchmarking measures.
+          Tags: [Performance Evaluation, Benchmarking, Benefit-Cost Analysis]
+        - Title: 8. Integration with Other Systems
+          Description: Integration of ATMS with traveler information services, road weather information, public transport, emergency services, and commercial vehicle operations.
+          Tags: [Integration, Traveler Information, Emergency Services]
+        - Title: Appendix A - Definitions
+          Description: Glossary of key terms related to ATMS.
+          Tags: [Definitions, Glossary, Traffic Terms]
+        - Title: Appendix B - References
+          Description: Supporting documents, manuals, and external resources referenced in the book.
+          Tags: [References, Supporting Documents, Standards]
+
+
+          
